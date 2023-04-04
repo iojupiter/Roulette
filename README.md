@@ -12,8 +12,8 @@ This bot works accurately, however you need to be aware that Kraken takes a ~0.2
 
 
 # How this script works
-1. sync.py begins a True loop and syncs with the current minute.
-2. Approx. 3 before the next 15 minute marks (i.e. 00, 15, 30, 45) sync.py will invoke decide().
+1. sync.py begins a true loop and syncs with the current minute.
+2. Approx. 3 seconds before the next 15 minute marks (i.e. 00, 15, 30, 45) sync.py will invoke decide().
 3. decide() fetches the latest 15 minute btc/usd OHLC candlestick from the Kraken API, decodes and appends the data to the btcusd-15m.csv file.
 4. A logistic regression is applied on the dataset by creating a target column. 5 Rolling averages columns of 4h, 8h, 16h, 20h respectively are created as parameters for the prediction.
 The dataset is split into train/test with last 200 rows as test rows. Random Forest Classifier with 200 estimators is fit. Prediction accuracy is constrained with a 60% probability.
