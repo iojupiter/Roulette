@@ -2,6 +2,9 @@
 A trading bot which uses a logistic regression to predict whether the next 15 minute BTC/USD candlestick will close red or green. As long as the candle is predicted to close green, open and hold a position.
 This bot works accurately, however you need to be aware that Kraken takes a ~0.26% fee on the trade size for both the buy order and the sell order. This implies that 15 minute candlesticks closing green at least above 0.52% are profitable.
 
+
+![Dashboard](https://github.com/iojupiter/Roulette/blob/main/Screenshot%202023-04-04%20at%2021.04.13.png?raw=true)
+
 # How to run this script
 1. Add your Kraken API key and Secret in sign.py, order.py and balance.py
 2. The /Prod folder is a python virtual environment which you need to initialize with "source Prod/bin/activate"
