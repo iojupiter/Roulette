@@ -25,7 +25,7 @@ def get_OHLC():
     t = time.strftime('%Y-%m-%d %H:%M', time.gmtime(timestamp))
 
     # Open the CSV file for appending
-    with open('/Users/jupiter/Desktop/Roulette/Models/LogisticRegression/Prod/btcusd-15m.csv', 'a') as f:
+    with open('btcusd-15m.csv', 'a') as f:
         f.write("\n")
         f.write(f"KRAKEN,XBT,USD,{t},{open_price},{high_price},{low_price},{close_price},{quote_volume},{base_volume}")
 
