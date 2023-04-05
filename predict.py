@@ -12,7 +12,7 @@ import verify_data
 def predict():
     # Load the data
     verify_data.parse_csv()
-    data = pd.read_csv('/Users/jupiter/Desktop/Roulette/Models/LogisticRegression/Prod/btcusd-15m.csv')
+    data = pd.read_csv('btcusd-15m.csv')
 
     del data['Exchange']
     del data['Base']
